@@ -1,0 +1,43 @@
+1. composer create-project --prefer-dist laravel/laravel blog "6.*" (for create new project)
+    1.1 make new folder and inside folder :
+    1.2 for creating laravel 7 : composer create-project --prefer-dist laravel/laravel blog "7.*" (for create new project)
+2. php artisan make:controller folderName/FirstController  (for create new controller)2. php artisan make:controller folderName/FirstController  (for create new controller)
+
+2.2. php artisan make:controller FirstController --resource  (for create new resource controller"CRUD")
+
+3. php artisan route:list  (show all routes and how to access it)
+
+4. composer require laravel/ui "^1.2"
+4.1.1 composer require laravel/ui ^2.*
+php artisan ui vue --auth
+  (for laravel 7)  "its create a new auth folder in controller and view "
+4.1.2 npm install
+4.1.3 npm run dev
+   (for creting routes, login, register methods in controllers and default view in the project)
+
+(when upload to git its ignored when pulled it should run these commands)
+
+7. php artisan make:command scheduler_name  (for make laravel scheduler task)
+8. \App\console\commands\scheduler_name::class  (for calling inside commands list in Kernel file)
+9. php arisan schedule:run (for running task without waiting ti be)
+10. php artisan make:mail notify_mail
+11. composer dump-autoload  (if any change in connection in env file, or any error hapened in commands)
+
+12. php artisan make:model  (for creating new model )
+
+13.  return redirect()->back()->withErrors($valid)->withInputs($request->all());  for redirecting errors to the same page
+14. php artisan make:request OffeerRequest  (for make request file insetead of same controller file)
+
+15. php artisan config:clear (if cofig atts does not work like sessions and DB related config)
+16. composer require mcamara/laravel-localization (for install mcamara package)
+
+17. if fund method not working add protected $primaryKey='id' to the Model
+18. php artisan make:event name (for creating events)
+19. php artisan make:listener  name(for creating listeners)
+20. php artisan make:middleware checkAge (for make middleware)
+21. php artisan migrate (for make migrations for DB and all of the authentication)
+22. composer require -w tymon/jwt-auth --ignore-platform-reqs  (for api JWT packge)
+23. composer update --ignore-platform-reqs  ("same as above")
+24. composer require tymon/jwt-auth --ignore-platform-reqs (for jwt ignore the version)
+25. composer require pusher/pusher-php-server --ignore-platform-reqs(for installing pusher ignoring the version)
+
